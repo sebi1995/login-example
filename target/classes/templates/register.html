@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/register}" method="post">
+    <label>
+        Username:
+        <input type="text" th:value="${newAccount.username}" name="username" required/>
+    </label>
+    <br/>
+    <label>
+        Password:
+        <input type="text" th:value="${newAccount.password}" name="password" required/>
+    </label>
+    <br/>
+    <label>
+        Email:
+        <input type="email" th:value="${newAccount.email}" name="email" required/>
+    </label>
+    <br/>
+    <label>
+        Birthdate:
+        <input type="date" th:value="${newAccount.birthdate}" name="birthdate" required/>
+    </label>
+    <br/>
+    <label>
+        Sex:
+        <input type="text" th:value="${newAccount.sex}" name="sex" required/>
+    </label>
+    <br/>
+    <label>
+        Address 1:
+        <input type="text" th:value="${newAddress.address1}" name="address1" required/>
+    </label>
+    <br/>
+    <label>
+        Address 2:
+        <input type="text" th:value="${newAddress.address2}" name="address2"/>
+    </label>
+    <br/>
+    <label>
+        Country:
+        <input type="text" th:value="${newAddress.country}" name="country" required/>
+    </label>
+    <br/>
+    <label>
+        County:
+        <input type="text" th:value="${newAddress.county}" name="county" required/>
+    </label>
+    <br/>
+    <label>
+        Post code:
+        <input type="text" th:value="${newAddress.post_code}" name="postcode" required/>
+    </label>
+    <br/>
+    <input type="submit" value="Register"/>
+</form>
+</body>
+</html>
