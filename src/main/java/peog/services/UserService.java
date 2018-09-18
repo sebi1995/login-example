@@ -17,19 +17,19 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
 
     public User createUser(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+//        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
-    public User readUserByUsername(String username) {
+    public User getUserByUsername(String username) {
         return userRepository.findUserByUsername(username);
     }
 
-    public User readUserById(Integer id) {
+    public User getUserById(Integer id) {
         return userRepository.findById(id).get();
     }
 
@@ -39,11 +39,6 @@ public class UserService implements UserDetailsService {
 
     public void deleteUser(User user) {
         userRepository.delete(user);
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
     }
 
     @Override

@@ -1,19 +1,17 @@
 package peog.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import peog.entities.account.AccountStatus;
 import peog.entities.Address;
 import peog.entities.User;
 import peog.services.AddressService;
 import peog.services.UserService;
 
-import javax.validation.constraints.Email;
 import java.sql.Date;
 
 @Controller
@@ -25,30 +23,9 @@ public class AccessControlsController {
     @Autowired
     private AddressService addressService;
 
-    @GetMapping("/")
-    public String getIndex() {
-        return "index";
-    }
-
-    @GetMapping("home")
-    public String getHome(Model model) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = (User) auth.getPrincipal();
-        model.addAttribute("username", user.getUsername());
-        model.addAttribute("password", user.getPassword());
-        return "home";
-    }
-
     @GetMapping("/login")
     public String getLogin() {
         return "login";
-    }
-
-    @GetMapping("/new")
-    public String newUser() {
-        User user = new User("test", "test", null, null, null, null);
-        userService.createUser(user);
-        return "index";
     }
 
     @GetMapping("/register")

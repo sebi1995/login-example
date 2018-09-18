@@ -1,12 +1,16 @@
 package peog.entities;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import peog.entities.account.AccountStatus;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import java.sql.Date;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 public class User implements UserDetails {
@@ -34,18 +38,15 @@ public class User implements UserDetails {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @Column
-    private Boolean accountNonExpired;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "status_id")
+    private AccountStatus accountStatus;
 
-    @Column
-    private Boolean accountNonLocked;
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    private List<Information> informationList;
 
-    @Column
-    private Boolean credentialsNonExpired;
-
-    @Column
-    private Boolean enabled;
-
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date creation_date;
 
     public User() {
 
@@ -58,10 +59,14 @@ public class User implements UserDetails {
         this.birthdate = birthdate;
         this.sex = sex;
         this.address = address;
-        this.accountNonExpired = true;
-        this.accountNonLocked = true;
-        this.credentialsNonExpired = true;
-        this.enabled = true;
+        this.accountStatus = new AccountStatus(true);
+        this.informationList = new ArrayList<>();
+        this.creation_date = new Timestamp(new Date().getTime());
+    }
+
+    public User(String username, String password){
+        this.username = username;
+        this.password = password;
     }
 
     @Override
@@ -74,6 +79,14 @@ public class User implements UserDetails {
         return this.password;
     }
 
+    public void setCreation_date(Date creation_date) {
+        this.creation_date = creation_date;
+    }
+
+    public Date getCreation_date() {
+        return creation_date;
+    }
+
     @Override
     public String getUsername() {
         return this.username;
@@ -81,38 +94,22 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return this.accountNonExpired;
+        return this.accountStatus.getAccountNonExpired();
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return this.accountNonLocked;
+        return this.accountStatus.getAccountNonLocked();
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return this.credentialsNonExpired;
+        return this.accountStatus.getCredentialsNonExpired();
     }
 
     @Override
     public boolean isEnabled() {
-        return this.enabled;
-    }
-
-    public void setAccountNonExpired(Boolean accountNonExpired) {
-        this.accountNonExpired = accountNonExpired;
-    }
-
-    public void setAccountNonLocked(Boolean accountNonLocked) {
-        this.accountNonLocked = accountNonLocked;
-    }
-
-    public void setCredentialsNonExpired(Boolean credentialsNonExpired) {
-        this.credentialsNonExpired = credentialsNonExpired;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+        return this.accountStatus.getEnabled();
     }
 
     public int getId() {
@@ -161,5 +158,21 @@ public class User implements UserDetails {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public AccountStatus getAccountStatus() {
+        return accountStatus;
+    }
+
+    public void setAccountStatus(AccountStatus accountStatus) {
+        this.accountStatus = accountStatus;
+    }
+
+    public void setInformationList(List<Information> informationList) {
+        this.informationList = informationList;
+    }
+
+    public List<Information> getInformationList() {
+        return informationList;
     }
 }

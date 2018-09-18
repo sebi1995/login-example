@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <div>New update:</div>
+    <form action="#" th:action="@{/news/new}" method="post">
+        <label>
+            Information:
+            <input type="text" th:value="${new_news.information}" name="news_information" required autofocus/>
+        </label>
+        <input type="submit" value="Create"/>
+    </form>
+</div>
+
+<table th:unless="${all_news == null || all_news.isEmpty()}">
+    <tr th:each="info : ${all_news}">
+        <td th:text="${info.information}">info</td>
+        <td th:text="${info.owner.username}">owner</td>
+        <td th:text="${info.postDate}">date</td>
+        <td th:text="'Hidden: ' + ${info.hidden}"></td>
+        <td><a th:href="@{'/news/hideorunhide/' + ${info.id}}" th:text="'Hide/Unhide'"></a></td>
+        <td><a th:href="@{'/news/delete/' + ${info.id}}" th:text="'Delete'"></a></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
