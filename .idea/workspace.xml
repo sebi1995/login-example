@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95a29e2c-9793-4c09-8aa5-e9caa9c3c249" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/CurrentSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/controllers/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/controllers/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/controllers/NewsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/entities/Information.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/entities/account/AccountStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/repositories/InformationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peog/services/NewsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/changepassword.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/news.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../myminiwebsite/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../myminiwebsite/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../myminiwebsite/.idea/vcs.xml" afterDir="false" />
@@ -33,18 +23,14 @@
       <change afterPath="$PROJECT_DIR$/../testesttest/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../testesttest/src/main/resources/templates/fragments/fragments.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../testesttest/src/main/resources/templates/fragments/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/peog/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/peog/AppMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/peog/SecureConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/peog/SecureConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/peog/controllers/AccessControlsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/peog/controllers/AccessControlsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/peog/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/peog/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/peog/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/peog/controllers/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/peog/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/peog/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/peog/SecureConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/peog/SecureConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/peog/controllers/AccessControlsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/peog/controllers/AccessControlsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/peog/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/peog/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/changepassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/changepassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/peog/controllers/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/peog/controllers/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/peog/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/peog/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/changepassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/changepassword.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -89,16 +75,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="26" />
-          <entry key="html" value="2036" />
-          <entry key="java" value="9248" />
+          <entry key="html" value="2113" />
+          <entry key="java" value="9866" />
           <entry key="properties" value="1" />
           <entry key="thymes" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2036" />
-          <entry key="JAVA" value="9248" />
+          <entry key="HTML" value="2113" />
+          <entry key="JAVA" value="9866" />
           <entry key="PLAIN_TEXT" value="26" />
           <entry key="Properties" value="1" />
           <entry key="ThymeleafExpressions" value="1" />
@@ -111,26 +97,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/changepassword.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/peog/controllers/AccountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="357">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/peog/controllers/AccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/peog/services/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="353">
+              <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -139,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/peog/SecureConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="362">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -204,11 +190,11 @@
         <option value="$PROJECT_DIR$/src/main/java/peog/entities/Information.java" />
         <option value="$PROJECT_DIR$/src/main/java/peog/services/NewsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/peog/entities/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/changepassword.html" />
         <option value="$PROJECT_DIR$/src/main/java/peog/AppMain.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/changepassword.html" />
         <option value="$PROJECT_DIR$/src/main/java/peog/SecureConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/peog/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/peog/controllers/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/peog/services/UserService.java" />
       </list>
     </option>
   </component>
@@ -338,7 +324,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537248049227" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537305181931" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -401,12 +387,12 @@
       <option name="presentableId" value="Default" />
       <updated>1537102170680</updated>
       <workItem from="1537102174999" duration="17502000" />
-      <workItem from="1537132841660" duration="16835000" />
+      <workItem from="1537132841660" duration="18762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34337000" />
+    <option name="totallyTimeSpent" value="36264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="698" y="28" width="1302" height="1047" extended-state="0" />
@@ -686,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/changepassword.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/peog/AppMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -707,24 +686,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/peog/SecureConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/changepassword.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="357">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/peog/services/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/peog/SecureConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="362">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/peog/controllers/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="243">
+          <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/peog/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
         </state>
       </provider>
     </entry>

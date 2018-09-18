@@ -14,14 +14,17 @@ import peog.repositories.UserRepository;
 @Service
 public class UserService implements UserDetailsService {
 
-    @Autowired
     private UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
+    @Autowired
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public User createUser(User user) {
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
@@ -39,6 +42,20 @@ public class UserService implements UserDetailsService {
 
     public void deleteUser(User user) {
         userRepository.delete(user);
+    }
+
+    public boolean authUser(String username, String password) {
+        User user = userRepository.findUserByUsername(username);
+        if (user == null) {
+            return false;
+        } else {
+            return passwordEncoder.matches(user.getPassword(), password);
+        }
+    }
+
+    @Bean
+    public static PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Override
